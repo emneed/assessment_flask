@@ -22,7 +22,7 @@ def serve_homepage():
 
 @app.route("/application-form")
 def serve_application_form():
-    """Displays the application for to the user"""
+    """Displays the application form to the user"""
 
     job_list = ["Software Engineer", "QA Engineer", "Product Manager"]
 
