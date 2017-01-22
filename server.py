@@ -10,6 +10,17 @@ app.secret_key = "ABC"
 
 
 # YOUR ROUTES GO HERE
+@app.route("/")
+def serve_homepage():
+    """Returns the homepage when users visit the website"""
+    return render_template("index.html")
+
+@app.route("/application-form")
+def serve_application_form():
+    """Displays the application for to the user"""
+    job_list = ["Software Engineer", "QA Engineer", "Product Manager"]
+
+    return render_template("application-form.html", job_list=job_list)
 
 
 if __name__ == "__main__":

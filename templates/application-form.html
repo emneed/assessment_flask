@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Application Form</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
 </head>
 <body>
 
@@ -31,9 +31,9 @@
         <p>
             <label for="job_title">Applying for: </label>
             <select id="job_title" name="job">
-                <option value="software_engineer">Software Engineer</option>
-                <option value="qa_engineer">QA Engineer</option>
-                <option value="project_manager">Project Manager</option>
+                {% for job in job_list %}
+                    <option value={{job}}>{{job}}</option>
+                {% endfor %}
             </select>
         </p>
 
