@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <title>Application Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<!-- your html goes here -->
+
+    <h1>Job Application Form</h1>
+
+    <p id="directions">Please fill out the form below with your first and last name, your numerical salary requirement, and the position that you are applying for from the dropdown list of available positions. Double check your information before hitting submit. This action is final.</p>
+
+    <form action="/application-success" method="POST">
+        <p>
+            <label for="first_name">First Name: </label>
+            <input id="first_name" type="text" name="fname">
+        </p>
+
+        <p>
+            <label for="last_name">Last Name: </label>
+            <input id="last_name" type="text" name="lname">
+        </p>
+
+        <p>
+            <label for="salary">Salary Requirement: </label>
+            <input id="salary" type="text" name="salary">
+        </p>
+
+        <p>
+            <label for="job_title">Applying for: </label>
+            <select id="job_title" name="job">
+                <option value="software_engineer">Software Engineer</option>
+                <option value="qa_engineer">QA Engineer</option>
+                <option value="project_manager">Project Manager</option>
+            </select>
+        </p>
+
+        <p><input type="submit" name="submit" value="Submit"></p>
+    </form>
+
+</body>
+</html>
