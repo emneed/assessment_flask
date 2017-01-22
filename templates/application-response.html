@@ -6,6 +6,14 @@
 <body>
 
 <!-- fill this in -->
+<p>Thank you, {{ fname }} {{ lname }}, for applying to be a {{ job_title }}
+    {% if job_title in ["Software", "QA"] %} 
+        Engineer.
+    {% else %}
+        Manager.
+    {% endif %}
+    Your minimum salary requirement is {{ salary }}.</p>
+
 
 </body>
 </html>
